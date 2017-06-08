@@ -41,9 +41,9 @@ class TimeTracker
 
 	add_record: (puzzle, type, value, name) ->
 		unless @times.hasOwnProperty(puzzle)
-			return 'Can not find puzzle type ' + puzzle
+			return 'Cannot find puzzle type ' + puzzle
 		unless @times[puzzle].hasOwnProperty(type)
-			return 'Can not find records for ' + type
+			return 'Cannot find records for ' + type
 
 		records = @times[puzzle][type]
 
@@ -54,14 +54,14 @@ class TimeTracker
 				else
 					records[i].value = value
 					@save_times()
-					return 'set ' + name + '\'s time for ' + puzzle + ' ' + type + ' to ' + records[i].value
+					return 'Set ' + name + '\'s time for ' + puzzle + ' ' + type + ' to ' + records[i].value
 
 		records.push({
 			name, value
 		})
 		@save_times()
 
-		return 'set ' + name + '\'s time for ' + puzzle + ' ' + type + ' to ' + $.last_element(records).value
+		return 'Set ' + name + '\'s time for ' + puzzle + ' ' + type + ' to ' + $.last_element(records).value
 
 	get_record: (puzzle, type) ->
 		unless @times.hasOwnProperty(puzzle)
@@ -124,5 +124,10 @@ class TimeTracker
 				return 'Deleted ' + name + '\'s time for ' + puzzle + ' ' + type
 
 		return 'Can not find ' + name + '\'s time for ' + puzzle + ' ' + type
+	
+/*	favorite_puzzle: (puzzle, name) ->/
+///		unless @times.hasOwnProperty(puzzle)/
+///			return 'Can not find puzzle type ' + puzzle/
+		
 
 module.exports = TimeTracker
