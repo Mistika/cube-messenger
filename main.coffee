@@ -132,6 +132,14 @@ respond = (message) ->
 			res += i + '\n'
 
 		return res
+	
+#	else if body.match(/^set favorite?(?: [a-z0-9_'\-.]+){4}/i)
+#
+#		request = body.split(' ')
+#		name   = request[2]
+#		puzzle = request[3]
+#
+#		return time_tracker.add_record(puzzle, type, value, name)
 
 login({email: LOGIN_USERNAME, password: LOGIN_PASSWORD}, (err, api) ->
 	if err
