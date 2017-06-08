@@ -125,9 +125,9 @@ class TimeTracker
 
 		return 'Can not find ' + name + '\'s time for ' + puzzle + ' ' + type
 	
-/*	favorite_puzzle: (puzzle, name) ->/
-///		unless @times.hasOwnProperty(puzzle)/
-///			return 'Can not find puzzle type ' + puzzle/
+#	favorite_puzzle: (puzzle, name) ->/
+#		unless @times.hasOwnProperty(puzzle)/
+#			return 'Can not find puzzle type ' + puzzle/
 		
 
 module.exports = TimeTracker
